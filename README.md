@@ -75,15 +75,24 @@ In image, video data, it is aimed to classify abnormal images or to segment abno
 ## Image-level anomaly detection
 
 ### One Class (Anomaly) Classification target
-- Estimating the Support of a High- Dimensional Distribution [**OC-SVM**]  | **[Journal of Neural Computation' 01]** | [`[pdf]`](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.86.5955&rep=rep1&type=pdf)
+- :white_check_mark: Estimating the Support of a High- Dimensional Distribution [**OC-SVM**]  | **[Journal of Neural Computation' 01]** | [`[pdf]`](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.86.5955&rep=rep1&type=pdf)
+  - 使用SVM在单类数据上学习，输出0~1的概率，Normal的高分，Anomaly的低分
 - A Survey of Recent Trends in One Class Classification  | **[AICS' 09]** |  [`[pdf]`](https://aran.library.nuigalway.ie/xmlui/bitstream/handle/10379/1472/camera_ready_occ_lnai.pdf?sequence=1)
-- Anomaly detection using autoencoders with nonlinear dimensionality reduction  | **[MLSDA Workshop' 14]** | [`[link]`](https://dl.acm.org/citation.cfm?id=2689747)
+- :white_check_mark: Anomaly detection using autoencoders with nonlinear dimensionality reduction  | **[MLSDA Workshop' 14]** | [`[link]`](https://dl.acm.org/citation.cfm?id=2689747)
+  - 用AE对数据进行降维后做异常检测
 - A review of novelty detection | **[Signal Processing' 14]** |  [`[link]`](https://www.sciencedirect.com/science/article/pii/S016516841300515X)
-- Variational Autoencoder based Anomaly Detection using Reconstruction Probability |  **[SNU DMC Tech' 15]** | [`[pdf]`](http://dm.snu.ac.kr/static/docs/TR/SNUDM-TR-2015-03.pdf)
-- High-dimensional and large-scale anomaly detection using a linear one-class SVM with deep learning | **[Pattern Recognition' 16]** | [`[link]`](https://dl.acm.org/citation.cfm?id=2952200)
-- Transfer Representation-Learning for Anomaly Detection | **[ICML' 16]** | [`[pdf]`](https://pdfs.semanticscholar.org/c533/52a4239568cc915ad968aff51c49924a3072.pdf)
-- Outlier Detection with Autoencoder Ensembles  | **[SDM' 17]** | [`[pdf]`](http://saketsathe.net/downloads/autoencode.pdf)
-- Provable self-representation based outlier detection in a union of subspaces | **[CVPR' 17]** | [`[pdf]`](https://arxiv.org/pdf/1704.03925.pdf)
+- :white_check_mark: Variational Autoencoder based Anomaly Detection using Reconstruction Probability |  **[SNU DMC Tech' 15]** | [`[pdf]`](http://dm.snu.ac.kr/static/docs/TR/SNUDM-TR-2015-03.pdf)
+  - 使用Vanilla VAE对图像进行重构
+- :white_check_mark: High-dimensional and large-scale anomaly detection using a linear one-class SVM with deep learning | **[Pattern Recognition' 16]** | [`[link]`](https://dl.acm.org/citation.cfm?id=2952200)
+  - DBN抽Feature → OC-SVM
+- :white_check_mark: Transfer Representation-Learning for Anomaly Detection | **[ICML' 16]** | [`[pdf]`](https://pdfs.semanticscholar.org/c533/52a4239568cc915ad968aff51c49924a3072.pdf)
+  - 迁移学习 -- 用pretrain model抽取feature
+  - auxiliary task training
+- :white_check_mark: Outlier Detection with Autoencoder Ensembles  | **[SDM' 17]** | [`[pdf]`](http://saketsathe.net/downloads/autoencode.pdf)
+  - 用AE对数据进行重构
+  - 网络的dropout + 数据的adaptive sampling
+- :white_check_mark: Provable self-representation based outlier detection in a union of subspaces | **[CVPR' 17]** | [`[pdf]`](https://arxiv.org/pdf/1704.03925.pdf)
+  - 
 - [**ALOCC**]Adversarially Learned One-Class Classifier for Novelty Detection  | **[CVPR' 18]** |  [`[pdf]`](https://arxiv.org/pdf/1802.09088.pdf) [`[code]`](https://github.com/khalooei/ALOCC-CVPR2018)
 - Learning Deep Features for One-Class Classification | **[arXiv' 18]** |   [`[pdf]`](https://arxiv.org/pdf/1801.05365.pdf) [`[code]`](https://github.com/PramuPerera/DeepOneClass)
 - Efficient GAN-Based Anomaly Detection  | **[arXiv' 18]** |  [`[pdf]`](https://arxiv.org/pdf/1802.06222.pdf)
